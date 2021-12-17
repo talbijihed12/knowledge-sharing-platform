@@ -1,0 +1,138 @@
+<div class="p-dialog-content">
+  <div class="p-grid p-fluid">
+    <div class="p-col-12 p-md-6">
+      <div class="p-inputgroup">
+        <span class="p-inputgroup-addon">Title: </span>
+        <input
+          type="text"
+          pInputText
+          placeholder="Username"
+          value="{{ post.postName }}"
+          disabled
+        />
+      </div>
+    </div>
+    <div class="p-col-12 p-md-6">
+      <div class="p-inputgroup">
+        <span class="p-inputgroup-addon">Created By: </span>
+        <input
+          type="text"
+          pInputText
+          placeholder="Username"
+          value="{{ post.username }}"
+          disabled
+        />
+      </div>
+    </div>
+  </div>
+  <div class="p-grid p-fluid">
+    <div class="p-col-12 p-md-12">
+      <div class="p-inputgroup">
+        <span class="p-inputgroup-addon">Content: </span>
+        <textarea
+          value="{{ post.description }}"
+          pInputTextarea
+          disabled
+        ></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="p-grid p-fluid">
+    <div class="p-col-12 p-md-4">
+      <div class="p-inputgroup">
+        <span class="p-inputgroup-addon">Date: </span>
+        <input
+          type="text"
+          pInputText
+          placeholder="Username"
+          value="{{ post.createdDate }}"
+          disabled
+        />
+      </div>
+    </div>
+    <div class="p-col-12 p-md-4">
+      <div class="p-inputgroup">
+        <span class="p-inputgroup-addon">Signal Number: </span>
+        <input
+          type="number"
+          pInputText
+          placeholder="Username"
+          value="{{ post.signalCount }}"
+          disabled
+        />
+      </div>
+    </div>
+    <div class="p-col-12 p-md-4">
+      <div class="p-inputgroup">
+        <span class="p-inputgroup-addon">Comment Num:</span>
+        <input
+          type="number"
+          pInputText
+          placeholder="Username"
+          value="{{ post.commentCount }}"
+          disabled
+        />
+      </div>
+    </div>
+  </div>
+  <div *ngIf="commentsLoaded" >
+    <p-panel header="List of Comments" [toggleable]="toggleable">
+      <div class="p-grid p-fluid" *ngFor="let comment of comments">
+        <div class="p-grid p-fluid">
+          <div class="p-col-12 p-md-6">
+            <div class="p-inputgroup">
+              <span class="p-inputgroup-addon">Username </span>
+              <input
+                type="text"
+                pInputText
+                placeholder="Username"
+                value="{{ comment.username }}"
+                disabled
+              />
+            </div>
+          </div>
+          <div class="p-col-12 p-md-6">
+            <div class="p-inputgroup">
+              <span class="p-inputgroup-addon">Signal Number: </span>
+              <input
+                type="text"
+                pInputText
+                placeholder="Username"
+                value="{{ comment.signalCount }}"
+                disabled
+              />
+            </div>
+          </div>
+        </div>
+        
+        <div class="p-col-12 p-md-12">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon">Content: </span>
+            <input
+              type="text"
+              pInputText
+              placeholder="Username"
+              value="{{ comment.text }}"
+              disabled
+            />
+          </div>
+        </div>
+        
+        <div class="p-col-12 p-md-3">
+          <button pButton type="button" (click)="deleteComment(comment)" class="p-button-danger" icon="pi pi-trash"></button>
+
+        </div>
+      </div>
+    </p-panel>
+  </div>
+  
+</div>
+<p-footer class="p-dialog-footer">
+  <button
+    pButton
+    label="Submit"
+    icon="pi pi-trash"
+    iconPos="left"
+    class="p-button-danger"
+  ></button>
+</p-footer>

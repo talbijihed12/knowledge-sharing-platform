@@ -1,0 +1,70 @@
+/* You can add global styles to this file, and also import other style files */
+html {
+  padding: 0em;
+  height: 100%;
+}
+body {
+  padding: 0em;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Helvetica,
+    Arial, sans-serif, “Apple Color Emoji”, “Segoe UI Emoji”, “Segoe UI Symbol”;
+}
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+.login,
+.sign-up {
+  background-color: #0079d3;
+  border-color: #0079d3;
+  color: aliceblue;
+  fill: #0079d3;
+  border: 1px solid;
+  border-radius: 4px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  text-transform: uppercase;
+  padding: 3px 16px;
+  opacity: 1;
+}
+
+.ng-header,
+.ng-footer {
+  height: 50px;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(var(--header-footer-bg-color)),
+    to(var(--header-footer-bg-color2))
+  );
+  color: var(--header-footer-color);
+}
+.theme-light {
+  --main-background: #ffffff;
+  --header-footer-color: #000000;
+  --header-footer-bg-color: #d9d9d9;
+  --header-footer-bg-color2: #a6a6a6;
+  --menubar-background: #878787;
+  --menubar-color: #000000;
+  --active-menu-color: #cccccc;
+}
+.ng-main {
+  background-color: var(--main-background);
+  height: 100%;
+}
+.ng-content {
+  
+  overflow: auto;
+  height: calc(100% - 100px);
+  padding: 10px;
+  padding-top: 50px;
+}
+.ng-content .ui-card {
+  min-height: 100%;
+  background: #f7f9fa;
+}

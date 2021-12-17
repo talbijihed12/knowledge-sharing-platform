@@ -1,0 +1,31 @@
+.lesignalComment{
+    position: relative;
+    right: -10%;
+    height: 1px;
+    
+    
+    
+}
+.signalsection{
+    position: relative;
+    right: -90%;
+    background-color: #ffffff;
+}
+.upsignal {
+    cursor: pointer;
+    border-radius: 2px solid; 
+    right: -80%;       
+}
+
+.upsignal:hover {
+    color: red;
+}
+
+.signalcount{
+    position: relative;
+    right: 25px;
+    top: 50%;
+    font-weight: bold;
+    
+    
+}

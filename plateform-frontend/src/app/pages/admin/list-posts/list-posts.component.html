@@ -1,0 +1,52 @@
+<p-table
+  #dt
+  [value]="posts"
+  dataKey="id"
+  styleClass="p-datatable-customers"
+  [rowHover]="true"
+  [rows]="10"
+  [showCurrentPageReport]="true"
+  [rowsPerPageOptions]="[10, 25, 50]"
+  [loading]="loading"
+  [paginator]="true"
+  currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+  [filterDelay]="0"
+  [globalFilterFields]="[
+    'username',
+    'email',
+    'enabled',
+  ]"
+>
+  <ng-template pTemplate="header">
+    <tr>
+      <th *ngFor="let item of tableItems" pSortableColumn="item[value]">
+        {{ item.label }} <p-sortIcon field="item[value]"></p-sortIcon>
+      </th>
+
+      <th style="width: 8rem"></th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-post>
+    <tr >
+      <td *ngFor="let item of tableItems">
+        <div *ngIf="item.type !== 'date'">
+          {{ post[item.value] }}
+        </div>
+        <div *ngIf="item.type === 'date'">
+          {{ post[item.value] }}
+        </div>
+      </td>
+
+      <td style="text-align: center">
+        <button pButton type="button" (click)="showPost(post)" class="p-button-secondary" icon="pi pi-cog"></button>
+        <button pButton type="button" (click)="deletePost(post)" class="p-button-danger" icon="pi pi-trash"></button>
+
+      </td>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="emptymessage">
+    <tr>
+      <td colspan="8">No Users found.</td>
+    </tr>
+  </ng-template>
+</p-table>

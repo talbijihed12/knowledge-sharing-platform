@@ -1,0 +1,16 @@
+.ng-header,
+.ng-footer {
+  height: 50px;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(var(--header-footer-bg-color)),
+    to(var(--header-footer-bg-color2))
+  );
+  color: var(--header-footer-color);
+}
+.ng-footer div {
+    text-align: center;
+    padding: 10px;
+}

@@ -1,0 +1,22 @@
+<div class="sidebar">
+  <p-card>
+    <ng-template pTemplate="header">
+      <img
+        src="https://www.redditstatic.com/desktop2x/img/id-cards/home-banner@2x.png"
+      />
+    </ng-template>
+    <ng-template pTemplate="content">
+      <div style="text-align: center; font-size: 1em">
+        Welcome to KSPlatform home page. Come here to check in with your
+        favorite plateformes.
+      </div>
+      <div *ngFor="let item of routingList">
+        <div style="text-align: center">
+          <button class="btnCreatePost" (click)="goToPage(item.routerLink)">
+            {{ item.label }}
+          </button>
+        </div>
+      </div>
+    </ng-template>
+  </p-card>
+</div>

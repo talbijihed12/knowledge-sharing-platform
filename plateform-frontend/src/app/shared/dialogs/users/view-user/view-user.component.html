@@ -1,0 +1,55 @@
+<div class="p-dialog-content">
+  <div class="p-grid p-fluid">
+    <div class="p-col-12 p-md-12">
+      <div class="p-inputgroup">
+        <span class="p-inputgroup-addon">Username: </span>
+        <input
+          type="text"
+          pInputText
+          placeholder="Username"
+          value="{{ user.username }}"
+          disabled
+        />
+      </div>
+    </div>
+
+    <div class="p-col-12 p-md-12">
+      <div class="p-inputgroup">
+        <span class="p-inputgroup-addon">Email: </span>
+        <input
+          type="text"
+          pInputText
+          placeholder="Username"
+          value="{{ user.email }}"
+          disabled
+        />
+      </div>
+    </div>
+
+    <div class="p-col-12 p-md-12">
+      <div class="p-inputgroup">
+        <span class="p-inputgroup-addon">Role: </span>
+
+        <p-multiSelect
+          style="width: 100%"
+          [options]="userRoles"
+          [(ngModel)]="user.roles"
+          appendTo="body"
+          optionLabel="name"
+          
+        ></p-multiSelect>
+      </div>
+    </div>
+  </div>
+</div>
+<p-footer class="p-dialog-footer">
+  <button
+    pButton
+    label="Submit"
+    icon="pi pi-check"
+    iconPos="left"
+    class="p-button-success"
+    (click)="submitUpdate()"
+  ></button>
+  
+</p-footer>

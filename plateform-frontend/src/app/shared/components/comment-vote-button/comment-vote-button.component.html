@@ -1,0 +1,12 @@
+<div class="col-md-1">
+    <div class="d-flex flex-column votebox">
+      <div class="p-2">
+        <fa-icon (click)="upvoteComment()" class="upvote" [icon]="faArrowUp" [style.color]="comment.upVote ? 'green':''"></fa-icon>
+      </div>
+      <div class="p-2 votecount">{{comment.voteCount}}</div>
+      <div class="p-2">
+        <fa-icon (click)="downvoteComment()" class="downvote" [icon]="faArrowDown" [style.color]="comment.downVote ? 'red':''">
+        </fa-icon>
+      </div>
+    </div>
+</div>

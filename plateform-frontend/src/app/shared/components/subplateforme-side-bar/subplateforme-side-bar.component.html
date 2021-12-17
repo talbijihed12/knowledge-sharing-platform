@@ -1,0 +1,11 @@
+<div class="sidebar-view-subreddit">
+    <div style="color: black; font-weight: bold">Browse Subplateformes</div>
+    <hr />
+    <span *ngFor="let subplateforme of subplateforme">
+        <span class="subplateforme-text"><a href="/view-subplateforme/{{subplateforme.id}}">{{subplateforme.name}}</a></span>
+        <hr />
+    </span>
+    <div style="text-align: center" *ngIf="displayViewAll">
+        <a style="font-weight: bold" routerLink="/user/list-subplateformes">View All</a>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="lesignalComment">
+  
+    <div class = "signalsection">
+      <div class="d-flex flex-column votebox">
+        <div class="p-2">
+          <div class="p-2 signalcount">{{comment?.signalCount}}<fa-icon (click)="upsignalComment()" class="upsignal" [icon]="faBug" [style.color]="comment?.upSignal ? 'red':''"></fa-icon></div>
+            <div class="p-2">
+            </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>

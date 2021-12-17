@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+      <div class="create-subplateforme-container">
+        <form class="post-form" [formGroup]="createSubplateformeForm">
+          <div class="form-group">
+            <div class="create-subplateforme-heading">Create Subplateforme</div>
+            <hr />
+            <input type="text" [formControlName]="'name'" class="form-control" style="margin-top: 5px"
+              placeholder="Title" required>
+            <textarea type="text" [formControlName]="'description'" style="width: 100%; margin-top: 5px"
+              placeholder="Description" required></textarea>
+            <div>
+              <div style="margin-top: 5px" class="float-right">
+                <button (click)="discard()" class="btnDiscard">Discard</button>
+                <button (click)="createSubplateforme()" class="btnCreateSubplateforme">Create</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-3">
+        <div class="sidebar">
+          <h5 class="guidelines">Posting to KSPlatform</h5>
+          <hr />
+          <ul>
+            <li>WE CAN HELP YOU!</li>
+            <hr />
+            <li>Great Satisfaction Comes From Sharing With Others </li>
+            <hr />
+            <li>Take Care Of Those Who Take Care Of You</li>
+            <hr />
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
